@@ -1,0 +1,51 @@
+@import '../variables/font';
+@import '../variables/colors.scss';
+   a{
+        font-size: 16px;
+         cursor: pointer;
+    }
+    .myName_header{
+          font-family: $font-r;
+          font-size: 16px;
+    }
+    @media (min-width:768px) {
+         .myName_header{
+          font-family: $font-r;
+          font-size: 24px;
+    }
+    }
+@media (min-width:992px){
+     .myName_header{
+          font-family: $font-r;
+          font-size: 24px;
+    }
+    a{
+        font-size: 24px;
+
+    }
+    .section_main{
+    padding: 128px;
+}
+.section_details{
+margin: 0 auto toRem(16);
+width: 100%;
+text-align: center;
+
+    .title_section{
+    color: $primary;
+    font-family: $font-r;
+    line-height: 72px;
+    font-size: 64px;
+    text-transform: capitalize;
+    text-align: center;
+}
+    .brief_section{
+    color: $primary;
+    font-family: $font-r;
+    line-height: 72px;
+    font-size: 64px;
+    text-transform: capitalize;
+    text-align: center;
+}
+}
+}

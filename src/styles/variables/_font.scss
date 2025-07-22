@@ -1,0 +1,30 @@
+$font-r :'Times New Roman-R';
+$font-i :'Times New Roman-italic';
+$font-b :'Times New Roman-Bold';
+$font-bi :'Times New Roman-Bold-italic';
+
+@font-face {
+    font-family: $font-r;
+    src: url('../variables/fonts/times.ttf') format("truetype");
+font-display: swap;
+}
+
+
+@font-face {
+    font-family: $font-b;
+        src: url('../variables/fonts/timesbd.ttf') format("truetype");
+
+font-display: swap;
+}
+@font-face {
+    font-family: $font-bi;
+        src: url('../variables/fonts/timesbi.ttf') format("truetype");
+
+font-display: swap;
+}
+@font-face {
+    font-family: $font-i;
+        src: url('../variables/fonts/timesi.ttf') format("truetype");
+
+font-display: swap;
+}

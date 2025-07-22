@@ -1,0 +1,33 @@
+@import '../../../../styles/variables/font';
+@import '../../../../styles/variables/colors.scss';
+@import '../../../../styles/base/Custom';
+
+
+li{
+    list-style: none;
+    color:$textWhite ;
+
+}
+.desktop{
+    display: none;
+}
+.mobile{
+    display: block;
+}
+@media (min-width:768px){
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+}
+
+@media (min-width:992px){
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+}

@@ -13,10 +13,14 @@ li{
 }
 .mobile{
     display: block;
+        border-bottom: 1px solid grey;
+
 }
 @media (min-width:768px){
 .desktop{
     display: block;
+        border-bottom: 1px solid grey;
+
 }
 .mobile{
     display: none;
@@ -26,6 +30,7 @@ li{
 @media (min-width:992px){
 .desktop{
     display: block;
+    border-bottom: 1px solid grey;
 }
 .mobile{
     display: none;

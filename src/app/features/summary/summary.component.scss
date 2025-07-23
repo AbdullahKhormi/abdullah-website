@@ -1,0 +1,94 @@
+@import '../../../styles/base/Custom';
+@import '../../../styles/variables/colors.scss';
+.summary{
+background-color: $bgColor1;
+}
+
+.holder-my-data{
+    width: 300px;
+    height: 520px;
+    border: 4px solid $textWhite;
+    border-top-left-radius: 50%;
+ border-bottom-right-radius: 50%;
+ box-shadow: -4px -4px 2px 0px $primary;
+ .my-data{
+    padding: 37px 24px 0 24px;
+    .holder_image{
+        margin: 0 53px 20px ;
+        img{
+            margin-bottom: 16px;
+        }
+        .name{
+            font-size: 32px;
+        }
+        .brief{
+            font-size: 14px
+        }
+    }
+    .my_info{
+        div{
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            font-size: 14px;
+            p{
+                margin-bottom: 0;
+                font-size: 14px;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: $textWhite;
+            font-size: 14px;
+        }
+        i{
+            margin-right: 16px;
+        }
+    }
+    .skills{
+        .skill{
+            background-color: $primary;
+            border-radius: 8px;
+            padding:  0 8px;
+            color: $bgColor1;
+            font-size: 14px;
+        }
+    }
+ }
+}
+.data{
+    padding: 48px 32px ;
+    width: 215px;
+    height: 378px;
+    background-color: $bgColor2;
+    border-radius: 80px;
+    div{
+        margin-bottom: 48px;
+    }
+    span{
+        color: $primary;
+        font-size: 48px;
+    }
+    p{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+}
+  .holder-text{
+    text-align: left;
+span{
+    color: $primary;
+}
+        margin:64px 0 ;
+    }
+    .right-side{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+    }
+@media (min-width:992px) {
+.right-side{
+    flex-direction: row;
+}
+}

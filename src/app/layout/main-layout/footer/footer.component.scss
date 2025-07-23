@@ -1,0 +1,45 @@
+@import '../../../../styles/variables/font';
+@import '../../../../styles/variables/colors.scss';
+@import '../../../../styles/base/Custom';
+footer{
+    background: $bgColor1;
+    position: fixed;
+width: 100%;
+bottom: 0;
+  .section_main{
+    padding: 0 24px;
+}
+
+}
+.content_footer{
+    font-family: 'Para-U';
+    font-size: 16px;
+    text-transform: capitalize;
+    .holder-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:16px
+    }
+    .holder-copyright{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+@media (min-width:768px) {
+    .section_main{
+    padding: 0 128px;
+}
+.content_footer{
+     .holder-content{
+        display: flex;
+        flex-direction: row;
+    }
+      .holder-copyright{
+
+        flex-direction: row;
+
+    }
+}
+}

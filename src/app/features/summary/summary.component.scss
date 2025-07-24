@@ -1,5 +1,6 @@
 @import '../../../styles/base/Custom';
 @import '../../../styles/variables/colors.scss';
+@import '../../../styles/variables/font.scss';
 .summary{
 background-color: $bgColor1;
 }
@@ -78,8 +79,13 @@ background-color: $bgColor1;
     text-align: left;
 span{
     color: $primary;
+    text-transform: capitalize;
 }
         margin:64px 0 ;
+        .talk{
+            font-size: 32px;
+            font-family: $font-r;
+        }
     }
     .right-side{
    display: flex;

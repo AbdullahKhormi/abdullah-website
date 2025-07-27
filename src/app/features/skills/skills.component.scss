@@ -1,0 +1,68 @@
+@import '../../../styles/base/Custom';
+@import '../../../styles/variables/colors.scss';
+
+.skills {
+  background-image: url('../../../assets/skills/skillsBG.svg');
+
+  .scroll-img {
+    display: none;
+
+    .section_details {
+      margin-bottom: 0;
+    }
+  }
+
+  .section_details {
+    margin-bottom: 32px;
+  }
+
+  .brief {
+    color: #fff;
+  }
+
+  .services_content {
+    .web {
+      margin-bottom: 64px;
+
+      .left-side {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width: 8px;
+        background-color: $cssColor;
+      }
+
+      .web_border {
+        width: fit-content;
+        padding: 16px 24px;
+        background-color: $secondary;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        .content-web {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .circles {
+      p {
+        margin-bottom: 0;
+        font-size: 32px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .scroll-img {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      display: block;
+    }
+  }
+}

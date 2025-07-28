@@ -2,8 +2,11 @@
 @import '../../../styles/variables/colors.scss';
 
 .skills {
-  background-image: url('../../../assets/skills/skillsBG.svg');
-
+  background-image: url('../../../assets/skills/skillsBG.webp');
+  object-fit: cover;
+img{
+    object-fit: contain;
+}
   .scroll-img {
     display: none;
 

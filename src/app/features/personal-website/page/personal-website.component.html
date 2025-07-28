@@ -1,3 +1,23 @@
-<app-summary></app-summary>
-<app-about-me></app-about-me>
-<app-skills></app-skills>
+<section #summarySection>
+  <ng-container *ngIf="loadSummary">
+    <app-summary></app-summary>
+  </ng-container>
+</section>
+
+<section #aboutSection>
+  <ng-container *ngIf="loadAbout">
+    <app-about-me></app-about-me>
+  </ng-container>
+</section>
+
+<section #skillsSection>
+  <ng-container *ngIf="loadSkills">
+    <app-skills></app-skills>
+  </ng-container>
+</section>
+
+<section #worksSection>
+  <ng-container *ngIf="loadWorks">
+    <app-works></app-works>
+  </ng-container>
+</section>

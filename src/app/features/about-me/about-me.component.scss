@@ -2,12 +2,14 @@
 @import "../../../styles/variables/colors.scss";
 @import "../../../styles/variables/font";
 .about-me {
-  background-image: url("../../../assets/about-me/aboutBackground.svg");
+  background-image: url("../../../assets/about-me/aboutBackground.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   width: 100%;
-
+img{
+    object-fit: contain;
+}
 }
 .left-side {
   .title-section {

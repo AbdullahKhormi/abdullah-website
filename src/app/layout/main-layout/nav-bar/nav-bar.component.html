@@ -8,13 +8,13 @@
       <div class="d-flex align-items-center">
         <ul class="m-0 p-0">
   <li class="nav-item" [ngClass]="{ active: activeIndex === -1 }">
-    <a (click)="activeLink(-1)" [ngStyle]="{ color: activeIndex === -1 ? '#12f7d6' : 'white' }">home</a>
+    <a (click)="activeLink(-1,'#home')" [ngStyle]="{ color: activeIndex === -1 ? '#12f7d6' : 'white' }">Summary</a>
   </li>
 </ul>
 
 <ul *ngFor="let link of links; let i = index" class="m-0">
   <li class="nav-item" [ngClass]="{ active: activeIndex === i }">
-    <a (click)="activeLink(i)" [ngStyle]="{ color: activeIndex === i ? '#12f7d6' : 'white' }">{{ link.name }}</a>
+    <a (click)="activeLink(i,link.nav)" [ngStyle]="{ color: activeIndex === i ? '#12f7d6' : 'white' }">{{ link.name }}</a>
   </li>
 
 </ul>
@@ -34,46 +34,62 @@
 <!--mobile-->
 <div class="mobile">
   <nav class="py-3">
-  <div class="row">
+<div class="w-100">
+    <div class="row">
     <div class=" d-flex justify-content-between align-items-center " >
 
       <h1 class="text-white d-flex align-items-center m-0 myName_header">c/ Abdullah</h1>
       <div class="d-flex align-items-center">
-        <ul class="m-0 p-0">
-  <li class="nav-item" [ngClass]="{ active: activeIndex === -1 }">
-    <a (click)="activeLink(-1)" [ngStyle]="{ color: activeIndex === -1 ? '#12f7d6' : 'white' }">home</a>
-  </li>
-</ul>
 
-<ul *ngFor="let link of links.slice(0,0); let i = index" class="m-0">
-  <li class="nav-item" [ngClass]="{ active: activeIndex === i }">
-    <a (click)="activeLink(i)" [ngStyle]="{ color: activeIndex === i ? '#12f7d6' : 'white' }">
-      {{ link.name }}
-    </a>
-  </li>
-</ul>
-<ul class="m-0"><li *ngIf="links.length > 1" >
-  <a (click)="clickDropDown()">showAll</a>
-</li></ul>
+
+
+<div class="menu-wrapper " >
+  <!-- menu icon -->
+  <ul class="m-0">
+    <li *ngIf="links.length > 1">
+      <a (click)="clickDropDown()">
+        <ng-container *ngIf="!openDropDown; else closeIcon">
+          <img src="../../../../assets/header/icon-menu.svg" alt="Open menu">
+        </ng-container>
+        <ng-template #closeIcon>
+          <img src="../../../../assets/header/icon-x.svg" alt="Close menu" >
+        </ng-template>
+      </a>
+    </li>
+  </ul>
+
+
+</div>
 
       </div>
     </div>
   </div>
+</div>
 </nav>
-<div *ngIf="openDropDown">
-  <!-- <ul *ngFor="let link of links.slice(0); let i = index" class="m-0">
-    <li class="nav-item" [ngClass]="{ active: activeIndex === i + 2 }">
-      <a (click)="activeLink(i + 2)" [ngStyle]="{ color: activeIndex === i + 2 ? '#12f7d6' : 'white' }">
+<div *ngIf="openDropDown" class="">
+  <ul class="m-1.5 ps-0">
+    <li class="nav-item" [ngClass]="{ active: activeIndex === -1 }">
+      <a (click)="activeLink(-1, '#home')" [ngStyle]="{ color: activeIndex === -1 ? '#12f7d6' : 'white' }">
+        Summary
+      </a>
+    </li>
+  </ul>
+
+  <ul *ngFor="let link of links; let i = index" class="m-1.5 ps-0">
+    <li class="nav-item" [ngClass]="{ active: activeIndex === i }">
+      <a (click)="activeLink(i, link.nav)" [ngStyle]="{ color: activeIndex === i ? '#12f7d6' : 'white' }">
         {{ link.name }}
       </a>
     </li>
+  </ul>
 
-  </ul> -->
   <ul class="m-0 pb-3 ps-0">
-  <li class="d-flex align-items-center ">
-    <img src="../../../../assets/header/github.svg" class="me-2" alt="github icon">
-    <a href="https://github.com/AbdullahKhormi"  class="text-white text-decoration-none" target="_blank"><span >Github</span></a>
-  </li>
-</ul>
+    <li class="d-flex align-items-center">
+      <img src="../../../../assets/header/github.svg" class="me-2" alt="github icon">
+      <a href="https://github.com/AbdullahKhormi" class="text-white text-decoration-none" target="_blank">
+        <span>Github</span>
+      </a>
+    </li>
+  </ul>
 </div>
 </div>

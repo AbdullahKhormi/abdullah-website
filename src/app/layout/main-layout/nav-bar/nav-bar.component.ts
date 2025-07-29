@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NavigateSectionsService } from '../../../shared/services/header-sections/navigate-sections.service';
 
 @Component({
   standalone:true,
@@ -11,20 +12,40 @@ import { RouterModule } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 activeIndex:number=-1
+private sendSection= inject(NavigateSectionsService)
   constructor() { }
   openDropDown=false
 links:any[]=[]
   ngOnInit() {
     this.links=[
-    //   {
-    //   path:'/home' , name:'t'
-    // },
+      {
+      name:'about-me',nav:'#about-me',
+
+    },
+      {
+        name:'skills',nav:'#skills',
+
+    },
+      {
+        name:'works',nav:'#works',
+
+    },
+      {
+      name:'contact me',nav:'#contact-me',
+
+    },
 
   ]
   }
-activeLink(index:any){
+  navigateToSections(event:any){
+    console.log(event)
+  }
+activeLink(index:any,nav:any){
   this.activeIndex = index;
-  console.log(index)
+this.sendSection.setNavSectionObs(nav)
+this.openDropDown=false
+
+
 }
 clickDropDown(){
   this.openDropDown=!this.openDropDown

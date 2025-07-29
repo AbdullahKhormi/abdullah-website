@@ -1,28 +1,29 @@
-<section #summarySection>
-  <ng-container *ngIf="loadSummary">
+<section id="home">
+
     <app-summary></app-summary>
-  </ng-container>
+
 </section>
 
-<section #aboutSection>
-  <ng-container *ngIf="loadAbout">
+<section  id="about-me">
+
     <app-about-me></app-about-me>
-  </ng-container>
+
 </section>
 
-<section #skillsSection>
-  <ng-container *ngIf="loadSkills">
+<section id="skills">
+
     <app-skills></app-skills>
-  </ng-container>
+
 </section>
 
-<section #worksSection>
-  <ng-container *ngIf="loadWorks">
+<section  id="works">
+
     <app-works></app-works>
-  </ng-container>
+
 </section>
-<section #contactSection>
-  <ng-container *ngIf="loadContact">
+<section  id="contact-me">
+
     <app-contact-me></app-contact-me>
-  </ng-container>
+
 </section>
+<button *ngIf="show" class="position-fixed bottom-0 end-0 mb-2" (click)="scroll()"><i><img src="../../../../assets/common/icon-arrow-up-circle.svg"></i></button>

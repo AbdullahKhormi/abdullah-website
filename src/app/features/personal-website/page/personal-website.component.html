@@ -21,3 +21,8 @@
     <app-works></app-works>
   </ng-container>
 </section>
+<section #contactSection>
+  <ng-container *ngIf="loadContact">
+    <app-contact-me></app-contact-me>
+  </ng-container>
+</section>

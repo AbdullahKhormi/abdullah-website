@@ -1,0 +1,72 @@
+<div class="contact text-black position-relative">
+  <div class="container">
+    <div class="section_main scroll-img">
+      <div class="section_details">
+        <div class="row">
+
+                <img src="../../../assets/common/Scroll.webp " width="32px" height="140px">
+
+            </div>
+
+
+            </div>
+            </div>
+     <div class="section_main">
+
+            <div class="section_details">
+              <h1 class="title_section">Contact</h1>
+<p class="brief">I’m currently available for freelance work</p>
+</div>
+<div class="form-holder">
+  <div class="title-holder d-flex justify-content-center align-items-center ">
+ <div class="box-title">
+     <p>Send me a message</p>
+ </div>
+  </div>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 col-lg-6 mb-4">
+     <form  [formGroup]="contectMe" (ngSubmit)="submit()">
+<div class="part-top d-flex flex-wrap gap-3">
+  <div class="your-name flex-grow-1">
+    <label>Your name *</label>
+    <input type="text" placeholder="Enter your name" formControlName="yourName">
+  </div>
+  <div class="your-email flex-grow-1">
+    <label>Your email *</label>
+    <input type="email" placeholder="Enter your email" formControlName="yourEmail">
+  </div>
+</div>
+
+<div class="part-bottom">
+  <div class="your-message">
+    <label>Your message *</label>
+    <input type="text" placeholder="Enter your needs" formControlName="message">
+  </div>
+</div>
+      <div class="actions d-flex gap-3 align-items-center justify-content-center">
+        <button type="submit" class="submit d-flex justify-content-center align-items-center gap-2" [disabled]="!contectMe.valid">
+          <span><p class="mb-0">Send </p></span>
+          <span><i><img src="../../../assets/contactMe/icon-send.svg" > </i></span>
+        </button>
+        <button type="reset" class="reset d-flex justify-content-center align-items-center gap-2" (click)="contectMe.reset()"><span>reset</span>
+        <span><i><img src="../../../assets/contactMe/icon-trash.svg"></i></span></button>
+      </div>
+      <div
+  *ngIf="successMessage || errorMessage"
+  [ngClass]="{
+    'alert-box': true,
+    'success': successMessage,
+    'error': errorMessage,'closing': isClosing
+  }"
+>
+  {{ successMessage || errorMessage }}
+</div>
+
+  </form>
+  </div>
+ </div>
+</div>
+
+            </div>
+            </div>
+            </div>

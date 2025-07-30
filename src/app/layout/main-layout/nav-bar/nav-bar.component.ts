@@ -38,7 +38,6 @@ links:any[]=[]
   ]
   }
   navigateToSections(event:any){
-    console.log(event)
   }
 activeLink(index:any,nav:any){
   this.activeIndex = index;

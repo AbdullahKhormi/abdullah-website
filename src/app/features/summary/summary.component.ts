@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-summary',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule , ScrollRevealDirective],
   templateUrl: './summary.component.html',
-  styleUrl: './summary.component.scss'
+  styleUrls: ['./summary.component.scss']
 })
 export class SummaryComponent implements OnInit {
 skills:any[]=[]

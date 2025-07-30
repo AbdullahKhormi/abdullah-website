@@ -22,11 +22,11 @@ show=false
 
   ngOnInit(): void {
     this.recieveSection.getNavSectionObs().subscribe((res)=>{
-      console.log('rec',res)
+
       const element = document.querySelector(res)
 if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     })
-  this.checkScroll(); // <-- يتحقق من البداية
+  this.checkScroll();
   window.addEventListener('scroll', this.checkScroll);
   }
 

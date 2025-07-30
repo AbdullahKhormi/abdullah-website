@@ -7,7 +7,11 @@
             class="col-12 col-lg-4 col-xl-4 col-md-12 col-sm-12 d-flex justify-content-center"
           >
             <div class="left-side d-flex justify-content-center">
-              <div class="holder-my-data">
+              <div class="holder-my-data " appScrollReveal
+  [animationClass]="'fade-in'"
+  [delay]="'0.4s'"
+  [duration]="'0.6s'"
+    [repeat]="false">
                 <div class="my-data">
                   <div class="holder_image">
                     <img src="../../../assets/summary/Profile photo.svg" />
@@ -57,11 +61,15 @@
               </div>
             </div>
           </div>
-          <div class="right-side col-12 col-lg-8 col-md-12 col-xl-8 col-sm-12">
+          <div class="right-side col-12 col-lg-8 col-md-12 col-xl-8 col-sm-12" appScrollReveal
+  [animationClass]="'slide-left'"
+  [delay]="'0.4s'"
+  [duration]="'0.6s'"
+    [repeat]="false">
             <div
               class="holder-text d-flex align-items-center justify-content-center flex-column"
             >
-              <div>
+              <div >
                 <h1 class="mb-3">
                   Hey<br />
                   I’m <span>Abdullah Khormi</span><br />

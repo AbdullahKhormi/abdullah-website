@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [ScrollRevealDirective],
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+  styleUrls: ['./about-me.component.scss']
 })
-export class AboutMeComponent {
-
-}
+export class AboutMeComponent {}

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
 
 @Component({
@@ -7,7 +7,8 @@ import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.dir
   standalone: true,
   imports: [CommonModule,ScrollRevealDirective],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrl: './skills.component.scss',  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class SkillsComponent implements OnInit{
 skills:any[]=[]
@@ -39,5 +40,9 @@ this.skills=[
  name:'TILWINDS CSS', icon:'../../../assets/skills/tail.webp',color:'#00C1E0'
 },
 ]
+}
+trackByFn(index: number, item: any): any {
+  return item.name;
+
 }
 }

@@ -1,7 +1,18 @@
-@import '../../../../styles/variables/font';
 @import '../../../../styles/variables/colors.scss';
 @import '../../../../styles/base/Custom';
 
+
+
+.mobile{
+  nav{
+   h1{
+    span:nth-child(1){
+
+color:  $primary;
+    }
+   }
+  }
+}
 .menu-wrapper {
   max-width: 250px;
   text-align: right;
@@ -50,7 +61,20 @@ li{
     display: block;
         border-bottom: 1px solid grey;
 
+  nav{
+   h1{
+    span{
+      font-size: 19px;
+      &:nth-child(1){
+        color:  $primary;
+    }
+
+
+    }
+   }
+  }
 }
+
 .mobile{
     display: none;
 }

@@ -4,7 +4,7 @@
   <div class="row">
     <div class=" d-flex justify-content-between align-items-center " >
 
-      <h1 class="text-white d-flex align-items-center m-0 myName_header">c/ Abdullah</h1>
+      <h1 class="text-white d-flex align-items-center m-0 "><span class="l">&lt;C/&gt;</span> <span>Abdullah</span></h1>
       <div class="d-flex align-items-center">
         <ul class="m-0 p-0">
   <li class="nav-item" [ngClass]="{ active: activeIndex === -1 }">
@@ -12,7 +12,7 @@
   </li>
 </ul>
 
-<ul *ngFor="let link of links; let i = index" class="m-0">
+<ul *ngFor="let link of links;  trackBy : trackFun; let i = index" class="m-0">
   <li class="nav-item" [ngClass]="{ active: activeIndex === i }">
     <a (click)="activeLink(i,link.nav)" [ngStyle]="{ color: activeIndex === i ? '#12f7d6' : 'white' }">{{ link.name }}</a>
   </li>
@@ -21,7 +21,7 @@
 
 <ul class="m-0">
   <li class="d-flex align-items-center">
-    <img src="../../../../assets/header/github.svg" class="me-2" alt="github icon">
+    <img src="../../../../assets/header/github.svg" class="me-2" alt="github icon" loading="lazy">
     <a href="https://github.com/AbdullahKhormi"  class="text-white text-decoration-none" target="_blank"><span >Github</span></a>
   </li>
 </ul>
@@ -38,7 +38,7 @@
     <div class="row">
     <div class=" d-flex justify-content-between align-items-center " >
 
-      <h1 class="text-white d-flex align-items-center m-0 myName_header">c/ Abdullah</h1>
+      <h1 class="text-white d-flex align-items-center m-0 myName_header"><span class="l">&lt;C/&gt;</span><span> Abdullah</span></h1>
       <div class="d-flex align-items-center">
 
 
@@ -49,10 +49,10 @@
     <li *ngIf="links.length > 1">
       <a (click)="clickDropDown()">
         <ng-container *ngIf="!openDropDown; else closeIcon">
-          <img src="../../../../assets/header/icon-menu.svg" alt="Open menu">
+          <img src="../../../../assets/header/icon-menu.svg" alt="Open menu" loading="lazy">
         </ng-container>
         <ng-template #closeIcon>
-          <img src="../../../../assets/header/icon-x.svg" alt="Close menu" >
+          <img src="../../../../assets/header/icon-x.svg" alt="Close menu" loading="lazy">
         </ng-template>
       </a>
     </li>
@@ -75,7 +75,7 @@
     </li>
   </ul>
 
-  <ul *ngFor="let link of links; let i = index" class="m-1.5 ps-0">
+  <ul *ngFor="let link of links; trackBy : trackFun; let i = index" class="m-1.5 ps-0">
     <li class="nav-item" [ngClass]="{ active: activeIndex === i }">
       <a (click)="activeLink(i, link.nav)" [ngStyle]="{ color: activeIndex === i ? '#12f7d6' : 'white' }">
         {{ link.name }}
@@ -85,7 +85,7 @@
 
   <ul class="m-0 pb-3 ps-0">
     <li class="d-flex align-items-center">
-      <img src="../../../../assets/header/github.svg" class="me-2" alt="github icon">
+      <img src="../../../../assets/header/github.svg" class="me-2" alt="github icon" loading="lazy">
       <a href="https://github.com/AbdullahKhormi" class="text-white text-decoration-none" target="_blank">
         <span>Github</span>
       </a>

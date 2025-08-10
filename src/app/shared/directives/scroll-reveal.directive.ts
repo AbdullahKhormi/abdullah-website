@@ -8,7 +8,7 @@ export class ScrollRevealDirective implements OnInit {
   @Input() animationClass = 'fade-up';
   @Input() delay = '0s';
   @Input() duration = '0.6s';
-  @Input() repeat = true; // لو تبغى يعيد نفسه
+  @Input() repeat = true;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 

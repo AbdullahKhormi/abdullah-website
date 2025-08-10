@@ -1,0 +1,14 @@
+@import '../../../styles/variables/colors.scss';
+.loading-overlay {
+  position: fixed;
+  color: $bgColor1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0.7);
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -2,7 +2,6 @@
 @import "../../../styles/base/animations.scss";
 
 @import '../../../styles/variables/colors.scss';
-@import '../../../styles/variables/font.scss';
 .summary{
 background-color: $bgColor1;
 }
@@ -86,7 +85,6 @@ span{
         margin:64px 0 ;
         .talk{
             font-size: 32px;
-            font-family: $font-r;
         }
     }
     .right-side{

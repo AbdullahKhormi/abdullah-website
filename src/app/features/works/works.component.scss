@@ -2,9 +2,9 @@
 @import '../../../styles/variables/colors.scss';
 
 .works {
-  background-color: #000;
-  background-image: url('../../../assets/works/Works.svg');
+  border-top:1px solid grey ;
 
+background-color: $bgColor1;
   img {
     object-fit: contain;
   }
@@ -60,12 +60,7 @@ swiper-slide {
       }
     }
 
-    img {
-      width: 500px;
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
+
   }
 }
 
@@ -89,10 +84,15 @@ swiper-container::part(button-next) {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
+  &:active{
+    background-color: $primary;
+    color: $bgColor1;
+  }
 }
 
 swiper-container::part(bullet) {
   background-color: lightgray;
+
 }
 
 swiper-container::part(bullet-active) {
@@ -127,7 +127,21 @@ swiper-container::part(bullet-active) {
     clip-path: inset(0 -34% 0 0);
   }
 }
+@media (max-width: 576px) {
+  .work-item img {
 
+      width: 160px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+
+  }
+}
+@media (min-width: 768px) {
+  .work-item img {
+    width: 500px;
+  }
+}
 @media (min-width: 992px) {
   .scroll-img {
     padding-bottom: 0;
@@ -136,8 +150,4 @@ swiper-container::part(bullet-active) {
   }
 }
 
-@media (max-width: 576px) {
-  .work-item img {
-    width: 160px;
-  }
-}
+

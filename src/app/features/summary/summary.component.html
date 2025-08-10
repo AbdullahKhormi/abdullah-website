@@ -7,20 +7,16 @@
             class="col-12 col-lg-4 col-xl-4 col-md-12 col-sm-12 d-flex justify-content-center"
           >
             <div class="left-side d-flex justify-content-center">
-              <div class="holder-my-data " appScrollReveal
-  [animationClass]="'fade-in'"
-  [delay]="'0.4s'"
-  [duration]="'0.6s'"
-    [repeat]="false">
+              <div class="holder-my-data ">
                 <div class="my-data">
                   <div class="holder_image">
-                    <img src="../../../assets/summary/Profile photo.svg" />
+                    <img src="../../../assets/summary/Profile photo.svg" alt="image profile" loading="lazy" />
                     <h1 class="name">Abdullah Hassan</h1>
                     <h1 class="brief">Front-End Developer</h1>
                   </div>
                   <div class="my_info">
                     <div class="email">
-                      <i><img src="../../../assets/summary/icon-mail.svg" /></i>
+                      <i><img src="../../../assets/summary/icon-mail.svg" alt="icon mail" loading="lazy"/></i>
                       <a
                         href="https://mail.google.com/mail/?view=cm&to=akhormi20@gmail.com"
                         target="_blank"
@@ -29,18 +25,18 @@
                     </div>
                     <div class="address">
                       <i
-                        ><img src="../../../assets/summary/icon-map-pin.svg"
+                        ><img src="../../../assets/summary/icon-map-pin.svg" alt="icon location " loading="lazy"
                       /></i>
                       <p>Riyadh / Jazan</p>
                     </div>
                     <div class="time">
                       <i
-                        ><img src="../../../assets/summary/icon-briefcase.svg"
+                        ><img src="../../../assets/summary/icon-briefcase.svg" alt="icon briefcase" loading="lazy"
                       /></i>
                       <p>Full-time / Freelance</p>
                     </div>
                     <div class="linkedin">
-                      <i><img src="../../../assets/summary/icon-link.svg" /></i>
+                      <i><img src="../../../assets/summary/icon-link.svg" alt="icon linkedIn" loading="lazy"/></i>
                       <a
                         href="https://www.linkedin.com/in/abdullah-khormi-1535611a7"
                         target="_blank"
@@ -49,7 +45,7 @@
                     </div>
                   </div>
                   <div class="holder-skills d-flex gap-1">
-                    <div class="skills d-flex" *ngFor="let s of skills">
+                    <div class="skills d-flex" *ngFor="let s of skills ; trackBy : trackByFn;  ">
                       <div>
                         <div class="skill">
                           <p>{{ s.name }}</p>
@@ -61,11 +57,7 @@
               </div>
             </div>
           </div>
-          <div class="right-side col-12 col-lg-8 col-md-12 col-xl-8 col-sm-12" appScrollReveal
-  [animationClass]="'slide-left'"
-  [delay]="'0.4s'"
-  [duration]="'0.6s'"
-    [repeat]="false">
+          <div class="right-side col-12 col-lg-8 col-md-12 col-xl-8 col-sm-12">
             <div
               class="holder-text d-flex align-items-center justify-content-center flex-column"
             >

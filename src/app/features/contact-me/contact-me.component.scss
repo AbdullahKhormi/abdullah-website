@@ -1,8 +1,9 @@
 @import "../../../styles/base/Custom";
 @import "../../../styles/variables/colors.scss";
-@import "../../../styles/variables/font";
 .contact {
-  background-color: $bgColor1;
+ border-top:1px solid grey ;
+
+background-color: $bgColor1;
   img {
     object-fit: contain;
   }

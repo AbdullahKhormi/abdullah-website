@@ -1,10 +1,10 @@
 @import '../../../styles/base/Custom';
 @import '../../../styles/variables/colors.scss';
-
+@import '../../../styles/base/animations.scss';
 .skills {
-  background-image: url('../../../assets/skills/skillsBG.webp');
-  object-fit: cover;
-img{
+ border-top:1px solid grey ;
+
+background-color: $bgColor1;img{
     object-fit: contain;
 }
   .scroll-img {

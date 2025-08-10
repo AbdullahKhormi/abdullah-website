@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NavigateSectionsService } from '../../../shared/services/header-sections/navigate-sections.service';
 
@@ -8,7 +8,9 @@ import { NavigateSectionsService } from '../../../shared/services/header-section
   selector: 'app-nav-bar',
   imports:[CommonModule,RouterModule],
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  styleUrls: ['./nav-bar.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class NavBarComponent implements OnInit {
 activeIndex:number=-1
@@ -48,5 +50,8 @@ this.openDropDown=false
 }
 clickDropDown(){
   this.openDropDown=!this.openDropDown
+}
+trackFun(item:any){
+return item.name
 }
 }

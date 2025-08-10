@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ChangeDetectionStrategy } from '@angular/core';
 import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
 
 @Component({
@@ -6,6 +6,8 @@ import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.dir
   standalone: true,
   imports: [ScrollRevealDirective],
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss']
+  styleUrls: ['./about-me.component.scss'],
+   changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class AboutMeComponent {}

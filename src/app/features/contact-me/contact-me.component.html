@@ -4,7 +4,7 @@
       <div class="section_details">
         <div class="row">
 
-                <img src="../../../assets/common/Scroll.webp " width="32px" height="140px">
+                <img src="../../../assets/common/Scroll.webp " loading="lazy" width="32px" height="140px" alt="module scroll">
 
             </div>
 
@@ -46,10 +46,10 @@
       <div class="actions d-flex gap-3 align-items-center justify-content-center">
         <button type="submit" class="submit d-flex justify-content-center align-items-center gap-2" [disabled]="!contectMe.valid">
           <span><p class="mb-0">Send </p></span>
-          <span><i><img src="../../../assets/contactMe/icon-send.svg" > </i></span>
+          <span><i><img src="../../../assets/contactMe/icon-send.svg" alt="icon send" loading="lazy"> </i></span>
         </button>
-        <button type="reset" class="reset d-flex justify-content-center align-items-center gap-2" (click)="contectMe.reset()"><span>reset</span>
-        <span><i><img src="../../../assets/contactMe/icon-trash.svg"></i></span></button>
+        <button type="reset" class="reset d-flex justify-content-center align-items-center gap-2"  (click)="contectMe.reset()"><span>reset</span>
+        <span><i><img src="../../../assets/contactMe/icon-trash.svg" alt="icon trash" loading="lazy"></i></span></button>
       </div>
       <div
   *ngIf="successMessage || errorMessage"

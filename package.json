@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
- "install:legacy": "npm install --legacy-peer-deps",
-  "build": "ng build --configuration production",    "watch": "ng build --watch --configuration development",
+"install:legacy": "npm install --legacy-peer-deps",
+  "build": "ng build --configuration production",     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
@@ -20,13 +20,8 @@
     "@angular/router": "^17.3.0",
     "@emailjs/browser": "^4.4.1",
     "bootstrap": "^5.3.7",
-    "build": "^0.1.4",
     "emailjs": "^4.0.3",
-    "ng": "^0.0.0",
-    "ngx-useful-swiper": "^10.0.1",
-    "production": "^0.0.2",
     "rxjs": "~7.8.0",
-    "swiper": "^11.2.10",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },

@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "install:legacy": "npm install --legacy-peer-deps",
-"build": "ng build --configuration production && copy _redirects dist\\cloudflare\\",    "watch": "ng build --watch --configuration development",
+"build": "ng build --configuration production && cp _redirects dist/cloudflare/",
+"watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,

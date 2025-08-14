@@ -18,6 +18,6 @@ export class MainLayoutComponent {
   ngOnInit() {
     setTimeout(() => {
       this.loading = false;
-    }, 300);
+    }, 400);
   }
 }

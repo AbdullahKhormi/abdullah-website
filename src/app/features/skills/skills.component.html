@@ -35,12 +35,9 @@
   <div
     class="circle d-flex justify-content-center align-items-center mx-auto"
 
-    [ngStyle]="{
-      'background-color': item.color,
-      'width': '144px',
-      'height': '144px',
-      'border-radius': '50%'
-    }"
+    [ngStyle]="
+      dynamicStyles(item.color)
+    "
   >
     <img [src]="item.icon" alt="{{ item.name }}" width="48" height="48" loading="lazy" />
   </div>

@@ -62,15 +62,11 @@ background-color: $bgColor1;
   content:"Loading...";
   color:$primary;
 }
-@keyframes l2 {to{background-size: 100% 3px}}
 }
 
-@keyframes l1 {
-  to {
-    clip-path: inset(0 -34% 0 0);
-  }
-}
-@media (max-width: 576px) {
+
+
+@media (max-width: 768px) {
   .work-item img {
 
       width: 160px;

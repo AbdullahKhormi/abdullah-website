@@ -46,7 +46,7 @@ export class PersonalWebsiteComponent implements OnInit {
       const triggerPoint = header.getBoundingClientRect().bottom + window.scrollY;
       const shouldShow = window.scrollY > triggerPoint;
       if (this.show() !== shouldShow) {
-        this.show.set(shouldShow); // ✅ Signal handles reactivity
+        this.show.set(shouldShow);
       }
     }
   };

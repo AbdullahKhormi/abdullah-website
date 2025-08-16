@@ -50,11 +50,12 @@ background-color: $bgColor1;
   justify-content: center;
   align-items: center;
 
-  .right-side img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 64px;
-  }
+  // .right-side img {
+  //     background-color: $bgColor1;
+  //   max-width: 100%;
+  //   height: auto;
+  //   margin-top: 64px;
+  // }
 }
 
 .scroll-img {
@@ -63,15 +64,15 @@ background-color: $bgColor1;
 
 @media (min-width: 768px) {
   .all-side {
-    .right-side {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    // .right-side {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    // }
 
     .left-side {
       .title-section {
-        justify-content: flex-start;
+        justify-content: center;
 
         .title {
           p {
@@ -97,8 +98,9 @@ background-color: $bgColor1;
   .all-side {
     flex-direction: row;
 
-    .right-side img {
-      margin-top: 0;
-    }
+    // .right-side img {
+    //   margin-top: 0;
+    // }
   }
 }
+

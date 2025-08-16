@@ -5,6 +5,8 @@
 </div>
 
 
-<app-header *ngIf="!loading"></app-header>
-<router-outlet *ngIf="!loading"></router-outlet>
-<app-footer *ngIf="!loading"></app-footer>
+<ng-container *ngIf="!loading">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</ng-container>

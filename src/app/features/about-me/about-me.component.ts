@@ -11,4 +11,5 @@ import { NgOptimizedImage } from '@angular/common';
    changeDetection: ChangeDetectionStrategy.OnPush,
 
 })
-export class AboutMeComponent {}
+export class AboutMeComponent {
+}

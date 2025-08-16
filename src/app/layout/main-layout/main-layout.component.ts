@@ -1,23 +1,26 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { HeaderComponent } from "./header/header.component";
-import { RouterOutlet } from '@angular/router';
-import { FooterComponent } from "./footer/footer.component";
+import { Component, OnInit } from '@angular/core';
+import { Router, Event, NavigationEnd, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [HeaderComponent, RouterOutlet, FooterComponent , CommonModule],
+  imports: [HeaderComponent, FooterComponent, CommonModule,RouterOutlet],
   templateUrl: './main-layout.component.html',
-  styleUrl: './main-layout.component.scss',
-
+  styleUrls: ['./main-layout.component.scss'],
 })
-export class MainLayoutComponent {
-   loading = true;
+export class MainLayoutComponent implements OnInit {
+  loading = true;
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
-    setTimeout(() => {
-      this.loading = false;
-    }, 400);
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        this.loading = false;
+      }
+    });
   }
 }

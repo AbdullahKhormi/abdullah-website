@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NavigateSectionsService } from '../../../shared/services/header-sections/navigate-sections.service';
 
@@ -11,14 +11,17 @@ import { NavigateSectionsService } from '../../../shared/services/header-section
   styleUrls: ['./nav-bar.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 
+
 })
 export class NavBarComponent implements OnInit {
 activeIndex:number=-1
 private sendSection= inject(NavigateSectionsService)
   constructor() { }
   openDropDown=false
+
 links:any[]=[]
   ngOnInit() {
+
     this.links=[
       {
       name:'about-me',nav:'#about-me',
@@ -38,6 +41,16 @@ links:any[]=[]
     },
 
   ]
+
+  }
+   @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollY = window.scrollY;
+
+    if (scrollY === 0) {
+      this.activeIndex = -1;
+    } else {
+    }
   }
   navigateToSections(event:any){
   }

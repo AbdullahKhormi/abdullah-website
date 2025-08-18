@@ -1,7 +1,7 @@
 @import "../../../styles/base/Custom";
 @import "../../../styles/base/animations.scss";
 @import "../../../styles/variables/colors.scss";
-
+@import "../../../styles/variables/mixin.scss";
 .about-me {
  border-top:1px solid grey ;
 
@@ -45,10 +45,7 @@ background-color: $bgColor1;
 }
 
 .all-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ @include display-flex-col
 
   // .right-side img {
   //     background-color: $bgColor1;

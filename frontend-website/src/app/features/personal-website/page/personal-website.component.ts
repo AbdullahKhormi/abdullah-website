@@ -21,6 +21,7 @@ import { NavigateSectionsService } from '../../../shared/services/header-section
   templateUrl: './personal-website.component.html',
   styleUrl: './personal-website.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class PersonalWebsiteComponent implements OnInit {
   private recieveSection = inject(NavigateSectionsService);

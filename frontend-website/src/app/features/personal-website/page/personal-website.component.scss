@@ -1,9 +1,19 @@
 
 @import '../../../../styles/variables/colors.scss';
-button{
-    padding: 20px;
-    border-radius: 50px;
-    outline: none; border: none;
-    margin: 5px;
-    background-color: $primary;
+button {
+  padding: 20px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  background-color: $primary;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
 }
